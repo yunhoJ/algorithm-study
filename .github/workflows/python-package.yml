@@ -23,11 +23,19 @@ jobs: # 실제 실행될 내용
     - name: Run update.py # 2) update.py 실행
       run: |
         python update.py
+    - name: Debug GIT_TOKEN
+      run: |
+        if [ -z "${{ secrets.GIT_TOKEN }}" ]; then
+          echo "❌ GIT_TOKEN is EMPTY"
+        else
+          echo "✅ GIT_TOKEN is set"
+        fi
     - name: Commit changes # 3) 추가된 파일 commit
       run: |
         git config --global user.name 'yunhoJ' # 유저명
         git config --global user.email 'wjse0213@naver.com' # 유저 이메일
         git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/yunhoJ/algorithm-study.git
+        git remote -v
         git add -A
         git commit -am "auto update README.md" # 커밋 메시지
     - name: Push changes # 4) 메인에 푸시
