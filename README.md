@@ -46,6 +46,7 @@
 |2739. 구구단|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2739.%E2%80%85%EA%B5%AC%EA%B5%AC%EB%8B%A8/%EA%B5%AC%EA%B5%AC%EB%8B%A8.java)|
 |2741. N 찍기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2741.%E2%80%85N%E2%80%85%EC%B0%8D%EA%B8%B0/N%E2%80%85%EC%B0%8D%EA%B8%B0.java)|
 |2742. 기찍 N|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2742.%E2%80%85%EA%B8%B0%EC%B0%8D%E2%80%85N/README.md)|
+|2744. 대소문자 바꾸기|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2744.%E2%80%85%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90%E2%80%85%EB%B0%94%EA%BE%B8%EA%B8%B0/README.md)|
 ### 🚀 Gold
 | 문제번호 | 링크 |
 | ----- | ----- |
