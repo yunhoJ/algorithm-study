@@ -4,7 +4,6 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
         Stack<Integer> integerStack = new Stack<>();
         int N = Integer.parseInt(br.readLine());
@@ -15,13 +14,8 @@ public class Main {
             while (a>=num){
                 integerStack.push(num);
                 sb.append("+\n");
-//                if (a==num){
-//                    integerStack.pop();
-//                    sb.append("-\n");
-//                }
                 num+=1;
             }
-
             if (integerStack.pop()==a){
                 sb.append("-\n");
             }else{
