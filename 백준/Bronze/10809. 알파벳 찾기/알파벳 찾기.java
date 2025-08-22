@@ -1,31 +1,29 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
+class Main {
 
-public class Main {
     public static void main(String[] args) throws IOException {
-        char al[] = new char[26];
-        int result [] = new int[26];
-        char init ='a';
-        for(int i = 0 ;i<26;i++){
-            result[i] =  -1;
-            al[i]=init;
-            init+=1;
-        }
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw  = new BufferedWriter(new OutputStreamWriter(System.out));
-        char s[] = br.readLine().toCharArray();
-        for (int i = 0; i<s.length;i++ ){
-            for (int j=0;j<al.length;j++){
-                if ((s[i]==al[j])&(result[j]==-1)){
-                    result[j]=i;
-                }
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        char[] inputString = br.readLine().toCharArray();
+        int[] result = new int[26];
+        Arrays.fill(result, -1);
+
+        for (int i = 0; i <inputString.length ; i++) {
+            if (result[(int)inputString[i] - 97]==-1){
+                result[(int)inputString[i] - 97] = i;
             }
         }
-        for (int i = 0; i <result.length ; i++) {
-            bw.write(result[i]+" ");
+
+        for (int answer:result
+        ) {
+            bw.write(answer+" ");
         }
         bw.flush();
-        bw.close();
     }
 }
