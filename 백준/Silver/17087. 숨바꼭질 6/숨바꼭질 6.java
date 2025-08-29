@@ -12,32 +12,30 @@ public class Main {
         int S = Integer.parseInt(st.nextToken());
         int[] arr = new int[N];
         st = new StringTokenizer(br.readLine());
-        int min = 1000000001;
         for (int i = 0; i <N ; i++) {
             int tmp =Math.abs(Integer.parseInt(st.nextToken()) - S);
-            if (tmp<min){
-                min = tmp;
-            }
             arr[i] = Math.abs(tmp);
 
         }
 
-        System.out.println(GCD(arr,min));
+        System.out.println(GCD(arr));
 
     }
 
-    private static int GCD(int[] arr, int min) {
-        for (int i = min; i >0 ; i--) {
-            boolean ok = true;
-            for (int x : arr) {
-                if (x % i != 0) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) return i;
-
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int tmp = a % b;
+            a = b;
+            b = tmp;
         }
-        return 1;
+        return a;
+    }
+
+    private static int GCD(int[] arr) {
+        int g = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            g = gcd(g, arr[i]);
+        }
+        return g;
     }
 }
