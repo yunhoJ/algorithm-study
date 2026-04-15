@@ -35,9 +35,8 @@ public class Main {
         if (i<2){
             return false;
         }
-        for (int j = 2; j <= Math.sqrt(i) ; j++) {
+        for (int j = 3; j *j<=i ; j+=2) {
             if(i%j==0){
-                primeCache.put(i, false);
                 return false;
             }
         }
